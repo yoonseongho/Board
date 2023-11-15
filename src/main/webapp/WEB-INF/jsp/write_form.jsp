@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>석주잉 게시판 - 글쓰기</title>
+    <title>게시판 - 글쓰기</title>
     <link rel="stylesheet" href="/static/css/write_form.css"/>
 </head>
 <body>

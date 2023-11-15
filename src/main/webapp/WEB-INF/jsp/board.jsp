@@ -5,13 +5,13 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>석주잉 게시판</title>
+    <title>게시판</title>
     <link rel="stylesheet" href="/static/css/board.css"/>
 </head>
 <body>
     <div class="wrap">
         <jsp:include page="topbar.jsp"/>
-        <div class="title">석주잉 게시판</div>
+        <div class="title">게시판</div>
         <div class="top-bar">
             <div>
                 <select id="category" class="swal2-select">
