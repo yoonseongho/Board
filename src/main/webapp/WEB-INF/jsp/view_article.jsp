@@ -101,7 +101,7 @@
                                                             <c:set var="parent" value="${reply.replyId}"></c:set>
                                                         </c:otherwise>
                                                     </c:choose>
-                                                    <span id="${parent} ${reply.replyId} ${reply.nickname}" class="comment_info_button">답글쓰기</span>
+                                                    <span id="${parent} ${reply.replyId} ${reply.nickname}" class="comment_info_button">댓글쓰기</span>
                                                 </c:if>
                                             </div>
                                             <c:if test="${loginMember != null and (loginMember.memberId == reply.memberId or loginMember.memberId == 0)}">
@@ -124,7 +124,6 @@
                     <div class="comment_writer_button">
                         <button class="button2" onclick="writeReply(0)">등록</button>
                     </div>
-                </div>
                 </c:if>
             </div>
             <div class="article_bottom_bar">
