@@ -15,7 +15,7 @@
         <div class="top-bar">
             <div>
                 <select id="category" class="swal2-select">
-                    <option value=전체보기>전체보기</option>
+                    <option value="전체보기">전체보기</option>
                     <c:forEach var="category" items="${categories}">
                         <c:if test="${category.categoryId != 0}">
                             <c:choose>
