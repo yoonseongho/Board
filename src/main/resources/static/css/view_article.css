@@ -1,6 +1,9 @@
-body {
+html, body {
     background: white;
-    margin: 0;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 .swal2-input {
     text-align: center;
