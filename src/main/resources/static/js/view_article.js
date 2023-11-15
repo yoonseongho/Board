@@ -7,13 +7,13 @@ $(document).ready(function () {
 
 $.showMemberInfo = function (event) {
     let mid = event.target.id.substr(1);
-    location.href = "/mypage?id="+mid;
+    location.href = "/mypage?id=" + mid;
 };
 
 $.showImage = function (event) {
     let id = event.target.src.split("=")[1].split('&')[0];
     let url = '/mypage/show-profile?id=' + id;
-    window.open(url,"new", "width=500, height=500, top=150, left=150, resizable=no");
+    window.open(url, "new", "width=500, height=500, top=150, left=150, resizable=no");
 };
 
 $.clickLikeButton = function () {
@@ -40,7 +40,7 @@ $.postLike = function (successFunc) {
     $.ajax({
         url: '/board/like',
         type: 'POST',
-        data: { boardId: articleId, flag: flag },
+        data: {boardId: articleId, flag: flag},
         success: successFunc
     });
 };
@@ -52,16 +52,16 @@ function showReplyWriteForm(event) {
     let from = targetId[1];
     let to = targetId[2];
     let nickname = $('.comment_writer_name').text();
-    let recommentForm = ``
-        + `<div class="comment_writer recomment_form">`
-        + ` <div class="recomment_writer_name">${nickname}</div>`
-        + ` <textarea class="recomment_write_input" placeholder="${to}님께 답글쓰기" onkeydown="resize(this)"></textarea>`
-        + ` <div class="comment_writer_button">`
-        + `  <button class="button2" onclick="removeForm()">취소</button>`
-        + `  <button class="button2" onclick="writeReply(${parent}, '${to}')">등록</button>`
-        + ` </div>`
-        + `</div>`;
-    $('#comment_area'+from).append(recommentForm);
+    let recommentForm = `
+    <div class="comment_writer recomment_form">
+        <div class="recomment_writer_name">${nickname}</div>
+        <textarea class="recomment_write_input" placeholder="${to}님께 댓글쓰기" onkeydown="resize(this)" wrap="soft"></textarea>
+        <div class="comment_writer_button">
+            <button class="button2" onclick="removeForm()">취소</button>
+            <button class="button2" onclick="writeReply(${parent}, '${to}')">등록</button>
+        </div>
+    </div>`;
+    $('#comment_area' + from).append(recommentForm);
     $('.recomment_write_input').focus();
 }
 
@@ -71,11 +71,11 @@ function removeForm() {
 
 function resize(obj) {
     obj.style.height = "0px";
-    obj.style.height = (10+obj.scrollHeight)+"px";
+    obj.style.height = (10 + obj.scrollHeight) + "px";
 }
 
 function viewArticle(articleNo) {
-    location.href = "/board/"+articleNo;
+    location.href = "/board/" + articleNo;
 }
 
 function viewBoard() {
@@ -86,12 +86,12 @@ function writeReply(parent, to) {
     let content = $('.comment_write_input').val();
     let boardId = $('.article_wrap').attr('id');
     if (parent !== 0) {
-        content = '<b>'+to+'</b> ' + $('.recomment_write_input').val();
+        content = '<b>' + to + '</b> ' + $('.recomment_write_input').val();
     }
     let objArray = [
-        { name: 'content', value: defend(content) },
-        { name: 'parent', value: parent},
-        { name: 'boardId', value: boardId },
+        {name: 'content', value: defend(content)},
+        {name: 'parent', value: parent},
+        {name: 'boardId', value: boardId},
     ];
     $.sendPost('/board/write/reply', objArray);
 }
@@ -109,9 +109,9 @@ function deleteReply(parent, replyId) {
     }).then(data => {
         if (data.value) {
             let objArray = [
-                { name: 'replyId', value: replyId },
-                { name: 'parent', value: parent},
-                { name: 'boardId', value: boardId },
+                {name: 'replyId', value: replyId},
+                {name: 'parent', value: parent},
+                {name: 'boardId', value: boardId},
             ];
             $.sendPost('/board/delete/reply', objArray);
         }
@@ -120,7 +120,7 @@ function deleteReply(parent, replyId) {
 
 function modifyArticle() {
     let boardId = $('.article_wrap').attr('id');
-    location.href = '/board/modify/'+boardId;
+    location.href = '/board/modify/' + boardId;
 }
 
 function deleteArticle() {
@@ -135,7 +135,7 @@ function deleteArticle() {
         cancelButtonText: '취소'
     }).then(data => {
         if (data.value) {
-            let objArray = [{ name: 'boardId', value: boardId }];
+            let objArray = [{name: 'boardId', value: boardId}];
             $.sendPost('/board/delete', objArray);
         }
     });

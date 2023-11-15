@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" isELIgnored="false"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -24,7 +24,8 @@
                                     <img src="/static/img/null_profile.png" class="view_profile article_profile"/>
                                 </c:when>
                                 <c:otherwise>
-                                    <img src="/member/get-profile?middlePath=${article.writerId}&imageFileName=${article.profile}" class="view_profile ">
+                                    <img src="/member/get-profile?middlePath=${article.writerId}&imageFileName=${article.profile}"
+                                         class="view_profile ">
                                 </c:otherwise>
                             </c:choose>
                         </div>
@@ -35,7 +36,8 @@
                             <div class="write_time">
                                 <span>${article.date}</span>
                             </div>
-                        </div></div>
+                        </div>
+                    </div>
                     <div class="views">
                         <span>조회수 ${article.views}</span>
                     </div>
@@ -70,14 +72,16 @@
                                             <img src="/static/img/null_profile.png" class="view_profile">
                                         </c:when>
                                         <c:otherwise>
-                                            <img src="/member/get-profile?middlePath=${reply.memberId}&imageFileName=${reply.profilePhoto}" class="view_profile ">
+                                            <img src="/member/get-profile?middlePath=${reply.memberId}&imageFileName=${reply.profilePhoto}"
+                                                 class="view_profile ">
                                             <%--<img id="profile${status.index}" src="" class="view_profile"/>--%>
                                             <%--<input type="hidden" id="imgValue${status.index}" value="${reply.memberId}:${reply.profilePhoto}"/>--%>
                                         </c:otherwise>
                                     </c:choose>
                                     <div class="comment_content">
                                         <div class="comment_nick_box">
-                                            <span class="comment_nickname member" id="m${reply.memberId}">${reply.nickname}</span>
+                                            <span class="comment_nickname member"
+                                                  id="m${reply.memberId}">${reply.nickname}</span>
                                         </div>
                                         <div class="comment_text_box">
                                             <c:choose>
@@ -101,13 +105,15 @@
                                                             <c:set var="parent" value="${reply.replyId}"></c:set>
                                                         </c:otherwise>
                                                     </c:choose>
-                                                    <span id="${parent} ${reply.replyId} ${reply.nickname}" class="comment_info_button">댓글쓰기</span>
+                                                    <span id="${parent} ${reply.replyId} ${reply.nickname}"
+                                                          class="comment_info_button">댓글쓰기</span>
                                                 </c:if>
                                             </div>
                                             <c:if test="${loginMember != null and (loginMember.memberId == reply.memberId or loginMember.memberId == 0)}">
-                                            <div class="comment_info_delete">
-                                                <span class="comment_delete_button" onclick="deleteReply(${reply.parent}, ${reply.replyId})">삭제</span>
-                                            </div>
+                                                <div class="comment_info_delete">
+                                                    <span class="comment_delete_button"
+                                                          onclick="deleteReply(${reply.parent}, ${reply.replyId})">삭제</span>
+                                                </div>
                                             </c:if>
                                         </div>
                                     </div>
@@ -117,12 +123,15 @@
                     </ul>
                 </div>
                 <c:if test="${loginMember != null}">
-                <div class="comment_writer">
-                    <form name="commentForm" method="post" onsubmit="return false;">
-                    <div class="comment_writer_name">${loginMember.nickname}</div>
-                    <textarea class="comment_write_input" placeholder="댓글을 남겨보세요" onkeydown="resize(this)"></textarea>
-                    <div class="comment_writer_button">
-                        <button class="button2" onclick="writeReply(0)">등록</button>
+                    <div class="comment_writer">
+                        <form name="commentForm" method="post" onsubmit="return false;">
+                            <div class="comment_writer_name">${loginMember.nickname}</div>
+                            <textarea class="comment_write_input" placeholder="댓글을 남겨보세요" onkeydown="resize(this)"
+                                      wrap="soft"></textarea>
+                            <div class="comment_writer_button">
+                                <button class="button2" onclick="writeReply(0)">등록</button>
+                            </div>
+                        </form>
                     </div>
                 </c:if>
             </div>
@@ -136,10 +145,10 @@
                 </div>
                 <div class="article_bottom_right">
                     <c:if test="${current.prev != 0}">
-                    <button class="button1" onclick="viewArticle(${current.prev})">이전글</button>
+                        <button class="button1" onclick="viewArticle(${current.prev})">이전글</button>
                     </c:if>
                     <c:if test="${current.next != 0}">
-                    <button class="button1" onclick="viewArticle(${current.next})">다음글</button>
+                        <button class="button1" onclick="viewArticle(${current.next})">다음글</button>
                     </c:if>
                 </div>
             </div>
