@@ -14,7 +14,7 @@ $.setDefaultProfile = function () {
         title: '프로필 사진',
         text: '프로필 사진을 기본 사진으로 변경하시겠습니까?',
         icon: 'question',
-        confirmButtonColor: '#ff7799',
+        confirmButtonColor: '#9cddf8',
         confirmButtonText: '예',
         showCancelButton: true,
         cancelButtonText: '아니오'
@@ -33,7 +33,7 @@ $.setDefaultProfile = function () {
                                 title: "프로필 변경",
                                 text: "프로필 변경에 성공하였습니다!",
                                 icon: 'success',
-                                confirmButtonColor: '#ff7799'
+                                confirmButtonColor: '#9cddf8'
                             }).then(()=>{
                                 location.reload(true);
                             });
@@ -61,7 +61,7 @@ $.fileUpload = async function () {
     const { value: file } = await Swal.fire({
         title: '프로필 사진',
         input: 'file',
-        confirmButtonColor: '#ff7799',
+        confirmButtonColor: '#9cddf8',
         inputAttributes: {
             'accept': 'image/*',
             'aria-label': 'Upload your profile picture'
@@ -76,7 +76,7 @@ $.fileUpload = async function () {
                 title: '이 사진을 등록하시겠습니까?',
                 imageUrl: e.target.result,
                 imageAlt: 'The uploaded picture',
-                confirmButtonColor: '#ff7799',
+                confirmButtonColor: '#9cddf8',
                 confirmButtonText: '등록',
                 showCancelButton: true,
                 cancelButtonText: '취소'
@@ -111,7 +111,7 @@ function uploadSuccess (data) {
                 title: "프로필 변경",
                 text: "프로필 변경에 성공하였습니다!",
                 icon: 'success',
-                confirmButtonColor: '#ff7799'
+                confirmButtonColor: '#9cddf8'
             }).then(()=>{
                 location.reload(true);
             });

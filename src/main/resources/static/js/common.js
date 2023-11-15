@@ -31,7 +31,7 @@ $.fn.swalClickCancel = function (backUrl) {
             showCancelButton: true,
             cancelButtonText: '아니오',
             confirmButtonText: '예',
-            confirmButtonColor: '#ff7799'
+            confirmButtonColor: '#9cddf8'
         }).then(result => {
             if (result.value) {
                 location.replace(backUrl);

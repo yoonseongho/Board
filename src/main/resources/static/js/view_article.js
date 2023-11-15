@@ -103,7 +103,7 @@ function deleteReply(parent, replyId) {
         text: '정말로 삭제하시겠습니까?',
         icon: 'question',
         confirmButtonText: "삭제",
-        confirmButtonColor: '#ff7799',
+        confirmButtonColor: '#9cddf8',
         showCancelButton: true,
         cancelButtonText: '취소'
     }).then(data => {
@@ -130,7 +130,7 @@ function deleteArticle() {
         text: '정말로 삭제하시겠습니까?',
         icon: 'warning',
         confirmButtonText: "삭제",
-        confirmButtonColor: '#ff7799',
+        confirmButtonColor: '#9cddf8',
         showCancelButton: true,
         cancelButtonText: '취소'
     }).then(data => {

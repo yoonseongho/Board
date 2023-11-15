@@ -32,7 +32,7 @@ $.admin = function () {
         title: '카테고리 등록',
         text: '등록할 카테고리명을 입력하세요',
         confirmButtonText: '등록',
-        confirmButtonColor: '#ff7799',
+        confirmButtonColor: '#9cddf8',
         showCancelButton: true,
         cancelButtonText: '닫기',
     }).then((data) => {
@@ -71,7 +71,7 @@ $.duplicateResult = async function (data, inputId) {
             title: "아이디 중복",
             text: "다른 아이디를 입력해주세요",
             icon: "error",
-            confirmButtonColor: '#ff7799'
+            confirmButtonColor: '#9cddf8'
         }).then($.join);
     } else {
         let inputPwd = await $.inputPwd();
@@ -95,14 +95,14 @@ $.joinResult = function (data) {
             title: '회원가입 완료',
             text: '로그인 창으로 이동합니다',
             icon: 'success',
-            confirmButtonColor: '#ff7799'
+            confirmButtonColor: '#9cddf8'
         }).then(()=>$.login());
     } else {
         Swal.fire({
             title: '가입 실패',
             text: '회원가입에 실패하였습니다',
             icon: 'error',
-            confirmButtonColor: '#ff7799'
+            confirmButtonColor: '#9cddf8'
         });
     }
 };
@@ -112,7 +112,7 @@ $.warningMessage = async function(title, content) {
         title: title,
         text: content,
         icon: "warning",
-        confirmButtonColor: '#ff7799'
+        confirmButtonColor: '#9cddf8'
     });
 };
 
@@ -231,7 +231,7 @@ $.login = async function (where) {
                         title: "로그인 실패",
                         text: "아이디와 비밀번호를 다시 확인해주세요.",
                         icon: "error",
-                        confirmButtonColor: '#ff7799'
+                        confirmButtonColor: '#9cddf8'
                     }).then($.login);
                     break;
                 case ADMIN:
@@ -246,7 +246,7 @@ $.login = async function (where) {
                         title: '로그인 성공',
                         text: data.nick + '님 안녕하세요.',
                         icon: 'success',
-                        confirmButtonColor: '#ff7799'
+                        confirmButtonColor: '#9cddf8'
                     }).then(() => {
                         if (where !== undefined)
                             location.href = where;
@@ -267,7 +267,7 @@ $.swalInput = async function (input, title, text, confirmButtonText, footer) {
         title: title,
         text: text,
         confirmButtonText: confirmButtonText,
-        confirmButtonColor: '#ff7799',
+        confirmButtonColor: '#9cddf8',
         showCancelButton: true,
         cancelButtonText: '닫기',
         footer: footer,
@@ -293,7 +293,7 @@ $.swalTwoInputs = async function (input, title, text, placeholder1, placeholder2
             `<input id="swal-input2" onkeypress="${enter}" type="${input}" class="swal2-input" placeholder="${placeholder2}">`,
         focusConfirm: false,
         confirmButtonText: confirmButtonText,
-        confirmButtonColor: '#ff7799',
+        confirmButtonColor: '#9cddf8',
         showCancelButton: true,
         cancelButtonText: '닫기',
         preConfirm: () => {

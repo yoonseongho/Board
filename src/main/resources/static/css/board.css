@@ -51,12 +51,12 @@ div.top-bar > div > select.swal2-select {
 }
 
 .popup_footer {
-    color: #ff7799;
+    color: #9cddf8;
     font-weight: bold;
 }
 
 .popup_footer:hover {
-    color: #ff6688;
+    color: #9cddf8;
     cursor: pointer;
     text-decoration: underline;
 }
@@ -82,19 +82,19 @@ table.board {
 /*}*/
 
 table.board th {
-    border-top: 1px solid #ff7799;
-    border-bottom: 1px solid #ff7799;
-    background-color: #fffafa;
+    border-top: 1px solid #9cddf8;
+    border-bottom: 1px solid #9cddf8;
+    background-color: #ffffff;
     height: 35px;
 }
 
 table.board td {
-    border-bottom: 1px solid #ffdcdc;
+    border-bottom: 1px solid #9cddf8;
     height: 35px;
 }
 
 table.board tr:last-child td{
-    border-bottom: 1px solid #ff7799;
+    border-bottom: 1px solid #9cddf8;
 }
 
 table.board tr th > img { width: 25px; height: 20px; }
@@ -118,7 +118,7 @@ span.page-num { margin: 5px; }
 span.page-num:hover{ cursor: pointer; }
 
 .cur-page {
-    color: #ff0066;
+    color: #48b3e0;
     font-weight: bold;
 }
 
@@ -128,7 +128,7 @@ span.page-num:hover{ cursor: pointer; }
     height: 20px;
 }
 tr.notice {
-    background-color: #f9f9f8;
+    background-color: white;
 }
 tr.notice td:first-child,
 tr.notice td:nth-child(2) {

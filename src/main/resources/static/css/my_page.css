@@ -68,7 +68,7 @@
     cursor: pointer;
 }
 .selected {
-    color: #ff0066;
+    color: #78d4ff;
     font-weight: bold;
 }
 table {
@@ -76,18 +76,18 @@ table {
     width: 100%;
 }
 table tr th {
-    border-top: 1px solid #ff7799;
-    border-bottom: 1px solid #ff7799;
+    border-top: 1px solid #9cddf8;
+    border-bottom: 1px solid #9cddf8;
     background-color: #fffafa;
     height: 35px;
 }
 table tr td {
-    border-bottom: 1px solid #ffdcdc;
+    border-bottom: 1px solid #9cddf8;
     height: 35px;
     text-align: center;
 }
 table tr:last-child td {
-    border-bottom: 1px solid #ff7799;
+    border-bottom: 1px solid #9cddf8;
 }
 
 table.board tr th img { width: 23px; }
@@ -123,6 +123,6 @@ span.page-num { margin: 5px; }
 span.page-num:hover{ cursor: pointer; }
 
 .cur-page {
-    color: #ff0066;
+    color: #9cddf8;
     font-weight: bold;
 }

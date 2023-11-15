@@ -12,7 +12,7 @@ $.modify = function () {
         showCancelButton: true,
         cancelButtonText: '닫기',
         confirmButtonText: '등록',
-        confirmButtonColor: '#ff7799'
+        confirmButtonColor: '#9cddf8'
     }).then(result => {
         if (result.value) {
             $.ajax({
